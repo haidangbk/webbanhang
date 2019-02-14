@@ -1,0 +1,63 @@
+.formLogin {
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px 2px #555555;
+  border-radius: 5px;
+  width: 220px;
+  margin: 150px auto;
+  padding-bottom: 15px; }
+  .formLogin .labelForm {
+    height: 100px;
+    background: #18AA8D;
+    color: white;
+    padding-left: 20px;
+    line-height: 50px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    /*        border-top-left-radius: 5px;
+            border-top-right-radius: 5px;*/ }
+  .formLogin .contentForm {
+    padding: 10px;
+    text-align: center; }
+    .formLogin .contentForm .divInput {
+      text-align: center;
+      margin-bottom: 25px; }
+      .formLogin .contentForm .divInput input {
+        padding: 5px;
+        width: 90%;
+        font-size: 13px;
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #18AA8D; }
+        .formLogin .contentForm .divInput input:focus + .gachChan {
+          width: 190px; }
+      .formLogin .contentForm .divInput .gachChan {
+        width: 0px;
+        height: 1px;
+        background: #18AA8D;
+        margin: 0 auto;
+        transition: width 0.5s, height 0.5s; }
+    .formLogin .contentForm .forwardPage {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 13px; }
+      .formLogin .contentForm .forwardPage a {
+        text-decoration: none; }
+        .formLogin .contentForm .forwardPage a:nth-child(2) {
+          margin-left: 30px; }
+    .formLogin .contentForm .divBtnSubmit {
+      text-align: right; }
+      .formLogin .contentForm .divBtnSubmit .btnSubmit {
+        padding: 5px 10px;
+        border-radius: 3px;
+        background: #18AA8D;
+        color: white;
+        margin-bottom: 20px;
+        margin-top: 20px; }
+        .formLogin .contentForm .divBtnSubmit .btnSubmit:hover {
+          background: white;
+          color: #18AA8D;
+          transition: background 0.5s, color 0.4s; }
+
+/*# sourceMappingURL=Login.css.map */

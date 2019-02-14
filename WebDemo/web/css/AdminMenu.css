@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 27, 2018, 12:30:27 PM
+    Author     : HaiDang
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+.menu {
+  width: 16.6666666667%;
+  height: 100vh;
+  background: #4080FF;
+  float: left; }
+  .menu .menu-title {
+    height: 60px; }
+    .menu .menu-title:after {
+      clear: both; }
+    .menu .menu-title a .avatar {
+      margin-top: 10px;
+      margin-left: 40px;
+      width: 40px;
+      height: 40px;
+      float: left;
+      font-size: 18px; }
+    .menu .menu-title .label {
+      float: left;
+      line-height: 60px;
+      margin-left: 10px; }
+  .menu .nameAdmin {
+    text-align: center;
+    color: red;
+    text-transform: uppercase; }
+  .menu .menu-link .list-group-item:active {
+    background: #7088B7;
+    color: white; }
+
+/*# sourceMappingURL=AdminMenu.css.map */

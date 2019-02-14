@@ -1,0 +1,84 @@
+
+@import "Style.scss";
+.carousel-indicators {
+    li{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        color: red;
+        text-indent: 0px;
+        text-align: center;
+        line-height: 20px;
+    }
+}
+.slideShow_video{
+    max-height: 430px;
+    #mySlideShow{
+        margin-top: 78px;
+        padding-right: 0px;
+    }
+    #rightSlideShow{
+        margin-top: 78px;
+        .topRightSlideShow{
+            video{
+                max-width: 350px; 
+            }
+        }
+        .bottomRightSlideShow{
+            margin-top: 11px;
+            max-height: 400px;
+        }
+    }
+}
+.anhSlideShow{
+    max-height: 858px;
+}
+.carousel-control-prev-icon{
+    width: 30px;
+    height: 30px;
+}
+.carousel-control-next-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.contentProtect{
+    .nameList{
+        margin: 20px 0;
+        width: 100%;
+        border: 1px solid #ECECEC;
+        box-sizing: border-box;
+        font-size: 16px;
+        text-transform: uppercase;
+        height: 48px;
+        .divIconNameList{
+            background: $mauNenChinh;
+             line-height: 48px;
+            .iconNameList{
+                width: 30px;
+                height: 30px;
+                margin: 0 10px 0 7px;
+                line-height: 48px;
+            }
+        }
+        .nameList1{
+            padding: 7px 0;
+            margin-left: 20px;
+        }
+
+    }
+    .hang1{     
+        
+        .imageProduct{
+            height: 250px;
+            width: 255px;
+        }
+        .nameProduct{
+            color: $mauDen;
+        }
+        .priceProduct{
+            color: $mauDo;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: red;
+  text-indent: 0px;
+  text-align: center;
+  line-height: 20px; }
+
+.slideShow_video {
+  max-height: 430px; }
+  .slideShow_video #mySlideShow {
+    margin-top: 78px;
+    padding-right: 0px; }
+  .slideShow_video #rightSlideShow {
+    margin-top: 78px; }
+    .slideShow_video #rightSlideShow .topRightSlideShow video {
+      max-width: 350px; }
+    .slideShow_video #rightSlideShow .bottomRightSlideShow {
+      margin-top: 11px;
+      max-height: 400px; }
+
+.anhSlideShow {
+  max-height: 858px; }
+
+.carousel-control-prev-icon {
+  width: 30px;
+  height: 30px; }
+
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px; }
+
+.contentProtect .nameList {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 48px; }
+  .contentProtect .nameList .divIconNameList {
+    background: #18AA8D;
+    line-height: 48px; }
+    .contentProtect .nameList .divIconNameList .iconNameList {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px 0 7px;
+      line-height: 48px; }
+  .contentProtect .nameList .nameList1 {
+    padding: 7px 0;
+    margin-left: 20px; }
+.contentProtect .hang1 .imageProduct {
+  height: 250px;
+  width: 255px; }
+.contentProtect .hang1 .nameProduct {
+  color: black; }
+.contentProtect .hang1 .priceProduct {
+  color: red;
+  font-weight: bold; }
+
+/*# sourceMappingURL=Index.css.map */

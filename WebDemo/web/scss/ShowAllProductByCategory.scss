@@ -1,0 +1,20 @@
+@import "Style.scss";
+.nameList{
+    margin-top: 78px;
+    margin-bottom: 30px;
+    padding-right: 0px; 
+}
+.hang1{        
+
+    .imageProduct{
+        height: 250px;
+        width: 255px;
+    }
+    .nameProduct{
+        color: $mauDen;
+    }
+    .priceProduct{
+        color: $mauDo;
+        font-weight: bold;
+    }
+}

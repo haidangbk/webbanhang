@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.contentCart {
+  margin-top: 78px;
+  padding-right: 0px;
+  text-align: center; }
+  .contentCart .imageProduct {
+    width: 50px;
+    height: 50px; }
+  .contentCart .infoProduct {
+    line-height: 50px; }
+
+/*# sourceMappingURL=Cart.css.map */

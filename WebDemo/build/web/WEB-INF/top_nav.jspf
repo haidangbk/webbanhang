@@ -1,0 +1,97 @@
+<%@page import="Models.Cart"%>
+<%@page import="java.util.Map"%>
+<%@page import="Models.Item"%>
+<%@page import="DAO.JDBCSanPham"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Models.DanhMucSanPham"%>
+<%@page import="Models.Member"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!--Lấy danh mục sản phẩm--> 
+<!--Lấy danh mục sản phẩm--> 
+<% JDBCSanPham jdbcSP = new JDBCSanPham();%>
+<% Member profile = (Member) session.getAttribute("memberAccount");%>
+<%Cart cart = (Cart) session.getAttribute("cart");%>
+<% if (cart == null) {
+        cart = new Cart();
+        session.setAttribute("cart", cart);
+    }%>
+    
+<!--Nếu không có "navbar-expand-sm" thì thanh sẽ dọc dù mọi màn hình-->
+<nav class="top_nav navbar navbar-expand-md navbar-dark fixed-top">  
+    <a class="navbar-brand" href="Index.jsp"><img src="image/Logo.png"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <!--Menu bên trái sử dụng mr-auto-->
+        <ul class="navbar-nav mr-auto">
+            <!--Nếu dùng disabled thì sẽ không kích dc vào 1 trang tùy trọn-->
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Trang 1</a>
+                <div class="dropdown-menu">
+                    <% ArrayList<DanhMucSanPham> listDmsp = jdbcSP.getListTenDanhMuc(); %>
+                    <%for (DanhMucSanPham dmsp : listDmsp) {%>
+                    <a class="dropdown-item" href="FrontController?action=showAllProduct&category=<%=dmsp.getTen_danh_muc()%>"><%=dmsp.getTen_danh_muc()%></a>
+                    <%}%>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Trang 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Trang 3</a></li>
+        </ul>  
+        <!--Form tìm kiếm-->
+        <!--Sử dụng "justify-content-center" để form nằm ở giữa--> 
+        <ul class="navbar-nav justify-content-center">
+            <form class="form-inline" action="/somepage">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </ul>
+
+
+        <!--Menu bên phải sử dụng ml-auto, Nếu chưa có tài khoản thì hiển thị
+        đăng nhập và đăng ký, còn đã có tài khoản thì cho phép xem profile và đăng xuất-->
+
+        <ul class="navbar-nav ml-auto">
+            <!--Tạo xe hàng-->
+
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="Cart.jsp">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+
+            <%if (profile == null) {%>
+            <!--Nếu dùng disabled thì sẽ không kích dc vào 1 trang tùy trọn-->
+            <li class="nav-item">
+                <a class="nav-link" href="Login.jsp">  
+                    <i class="fas fa-user"></i> Đăng Nhập
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Register.jsp">
+                    <i class="fas fa-sign-in-alt"></i> Đăng ký
+                </a>
+            </li>
+            <% } else {%>
+            <% if (profile.getPosition() >= 2) {%>
+            <li class="nav-item">
+                <a class="nav-link" href="FrontController?action=danhSachThanhVien">
+                    <i class="fas fa-users-cog"></i>
+                </a>
+            </li>
+            <%}%>
+            <li class="nav-item">
+                <a class="nav-link" href="FrontController?action=profile">               
+                    <i class="fas fa-user"></i><span><%=' ' + profile.getUser()%></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="FrontController?action=logout">  
+                    <i class="fas fa-sign-out-alt"></i> Đăng Xuất
+                </a>
+            </li>    
+            <% }%>
+        </ul>
+    </div>
+</nav>

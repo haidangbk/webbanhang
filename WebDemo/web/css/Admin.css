@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.tableMember {
+  float: left;
+  width: 83.3333333333%; }
+  .tableMember .table {
+    width: 83.3333333333%;
+    margin: 0 auto; }
+    .tableMember .table .not-active {
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+      opacity: 0.6; }
+  .tableMember .notificationDeleteUser {
+    text-align: center; }
+
+/*# sourceMappingURL=Admin.css.map */

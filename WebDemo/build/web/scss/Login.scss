@@ -1,0 +1,75 @@
+.formLogin{
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px 2px #555555; // tạo đổ bóng
+    border-radius: 5px;
+    width: 220px;
+    margin:150px auto;
+    padding-bottom: 15px;
+    .labelForm{
+        height: 100px;
+        background: #18AA8D;
+        color: white;
+        padding-left: 20px;
+        line-height: 50px;
+        font-size: 25px;
+        margin-bottom: 15px;
+        /*        border-top-left-radius: 5px;
+                border-top-right-radius: 5px;*/
+
+    }
+    .contentForm{
+        padding: 10px;
+        text-align: center;
+        .divInput{
+            text-align: center;
+            margin-bottom: 25px;
+            input{
+                padding: 5px;
+                width: 90%;
+                font-size: 13px;
+                outline: none; 
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom:1px solid #18AA8D;
+                &:focus + .gachChan{
+                    width: 190px;
+                }
+            }
+            .gachChan{
+                width: 0px;
+                height: 1px;
+                background: #18AA8D;
+                margin: 0 auto; // cho div xuat hien o giua
+                transition: width 0.5s, height 0.5s;
+            }    
+        }
+        .forwardPage{
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 13px;
+            a{
+                text-decoration: none;
+                &:nth-child(2){
+                    margin-left: 30px;
+                }
+            }
+        }
+        .divBtnSubmit{
+            text-align: right;
+            .btnSubmit{
+                padding: 5px 10px;
+                border-radius: 3px;
+                background: #18AA8D;
+                color: white;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                &:hover{
+                    background: white;
+                    color: #18AA8D;
+                    transition: background 0.5s, color 0.4s;
+                }
+            }
+        }
+    }
+}

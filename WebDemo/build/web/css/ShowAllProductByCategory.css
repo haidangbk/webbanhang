@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.nameList {
+  margin-top: 78px;
+  margin-bottom: 30px;
+  padding-right: 0px; }
+
+.hang1 .imageProduct {
+  height: 250px;
+  width: 255px; }
+.hang1 .nameProduct {
+  color: black; }
+.hang1 .priceProduct {
+  color: red;
+  font-weight: bold; }
+
+/*# sourceMappingURL=ShowAllProductByCategory.css.map */
